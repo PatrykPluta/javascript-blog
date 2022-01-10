@@ -68,7 +68,7 @@ const titleClickHandler = function(event){
     const articleId = article.getAttribute('id')  
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    titleList.insertAdjacentHTML('beforebegin',linkHTML);
+    titleList.insertAdjacentHTML('afterbegin',linkHTML);
   }
     /* find the title element */
     
