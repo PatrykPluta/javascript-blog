@@ -67,25 +67,27 @@ const titleClickHandler = function(event){
     for(let article of articles){
     const articleId = article.getAttribute('id')  
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
-    }
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    titleList.insertAdjacentHTML('beforebegin',linkHTML);
+  }
     /* find the title element */
     
 
     /* get the title from the title element */
 
     /* create HTML of the link */
-    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log(linkHTML)
+    
+    
     /* insert link into titleList */
-    insertAdjacentHTML(linkHTML);
+    
 
  const links = document.querySelectorAll('.titles a');
   
   for(let link of links){
     link.addEventListener('click', titleClickHandler);
   }
-  generateTitleLinks();
+  
   }
-
+generateTitleLinks();
   
 }
